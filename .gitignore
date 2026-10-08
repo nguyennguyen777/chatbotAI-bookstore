@@ -1,0 +1,9 @@
+.env
+node_modules/
+
+# Project report files
+/BAO-CAO-*.docx
+/BAO-CAO-*.pdf
+/BÁO CÁO ĐỒ ÁN_BOOKSTORE.docx
+/bao-cao-baitaplon.html
+/~$*

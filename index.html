@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mộc Miên Books - hiệu sách trực tuyến và trợ lý đọc sách AI"
+    />
+    <title>Mộc Miên Books | Đọc điều hay, sống điều đẹp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      Miễn phí giao hàng cho đơn từ 299.000đ <span>·</span> Đổi trả trong 7 ngày
+    </div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Mộc Miên Books - Trang chủ">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span><strong>Mộc Miên</strong><small>BOOKS &amp; STORIES</small></span>
+      </a>
+      <div class="search-wrap">
+        <label class="sr-only" for="search-input">Tìm kiếm sách</label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Tìm sách, tác giả, chủ đề..."
+        />
+        <button
+          class="icon-button search-button"
+          id="search-button"
+          aria-label="Tìm kiếm"
+          type="button"
+        >
+          ⌕
+        </button>
+      </div>
+      <nav class="header-actions" aria-label="Điều hướng chính">
+        <a href="#categories">Khám phá</a>
+        <button
+          class="header-icon"
+          type="button"
+          aria-label="Sản phẩm yêu thích"
+        >
+          ♡
+        </button>
+        <button class="cart-button" type="button" aria-label="Mở giỏ hàng">
+          Giỏ hàng <span id="cart-count">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Góc đọc hôm nay</p>
+          <h1>Một cuốn sách hay,<br /><em>một ngày dịu lại.</em></h1>
+          <p class="hero-description">
+            Những trang sách được chọn kỹ cho những ngày bạn muốn học thêm, nghĩ
+            sâu hơn và sống chậm lại một chút.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#books"
+              >Khám phá sách <span>→</span></a
+            >
+            <button class="text-button" id="hero-chat-button" type="button">
+              <span class="chat-bubble-icon">✦</span> Hỏi trợ lý AI
+            </button>
+          </div>
+          <div class="hero-note">
+            <span class="avatar-stack"><i>AN</i><i>ML</i><i>TH</i></span
+            ><span
+              ><strong>12.000+</strong> độc giả đang đọc cùng Mộc Miên</span
+            >
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Một chồng sách được yêu thích">
+          <div class="sun-disc"></div>
+          <div class="leaf leaf-one"></div>
+          <div class="leaf leaf-two"></div>
+          <div class="leaf leaf-three"></div>
+          <div class="book-illustration book-back">
+            <span>THE<br />CREATIVE<br />ACT</span>
+          </div>
+          <div class="book-illustration book-middle"><span>Ikigai</span></div>
+          <div class="book-illustration book-front">
+            <span>Đi tìm<br />lẽ sống</span><b>VIKTOR E. FRANKL</b>
+          </div>
+          <div class="art-caption">Gợi ý của tháng <span>01 / 04</span></div>
+        </div>
+      </section>
+
+      <section class="category-strip" id="categories">
+        <div class="section-shell category-inner">
+          <div>
+            <p class="eyebrow">Chọn theo tâm trạng</p>
+            <h2>Bạn muốn đọc gì hôm nay?</h2>
+          </div>
+          <div class="category-list">
+            <button
+              class="category-pill active"
+              data-category="all"
+              type="button"
+            >
+              <span>✦</span> Tất cả
+            </button>
+            <button class="category-pill" data-category="van-hoc" type="button">
+              <span>◒</span> Văn học
+            </button>
+            <button
+              class="category-pill"
+              data-category="phat-trien"
+              type="button"
+            >
+              <span>↗</span> Phát triển bản thân
+            </button>
+            <button class="category-pill" data-category="kinh-te" type="button">
+              <span>◌</span> Kinh tế
+            </button>
+            <button
+              class="category-pill"
+              data-category="thieu-nhi"
+              type="button"
+            >
+              <span>✿</span> Thiếu nhi
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell books-section" id="books">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Được yêu thích nhất</p>
+            <h2>Những cuốn sách đáng có trên kệ</h2>
+          </div>
+          <a href="#books" class="view-all" id="view-all-books"
+            >Xem tất cả <span>→</span></a
+          >
+        </div>
+        <div class="book-grid" id="book-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>
+          Chưa tìm thấy cuốn sách phù hợp. Thử một từ khóa khác nhé.
+        </p>
+      </section>
+
+      <section class="ai-banner section-shell">
+        <div class="ai-banner-icon">✦</div>
+        <div>
+          <p class="eyebrow">Mộc Miên AI</p>
+          <h2>Không biết bắt đầu từ đâu?</h2>
+          <p>Trò chuyện với trợ lý đọc sách để tìm cuốn sách hợp với bạn.</p>
+        </div>
+        <button class="outline-button" id="banner-chat-button" type="button">
+          Bắt đầu trò chuyện <span>→</span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <span>© 2026 Mộc Miên Books</span
+        ><span>Đọc điều hay, sống điều đẹp.</span
+        ><span>Instagram &nbsp; · &nbsp; Facebook</span>
+      </div>
+    </footer>
+
+    <div class="cart-modal" id="cart-modal" hidden>
+      <div class="cart-backdrop" data-close-cart></div>
+      <section
+        class="cart-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+      >
+        <div class="cart-panel-header">
+          <div>
+            <p class="eyebrow">Kệ sách của bạn</p>
+            <h2 id="cart-title">Giỏ hàng</h2>
+          </div>
+          <button
+            class="cart-close"
+            id="close-cart"
+            type="button"
+            aria-label="Đóng giỏ hàng"
+          >
+            ×
+          </button>
+        </div>
+        <div class="checkout-view" id="checkout-view" hidden>
+          <button class="back-to-cart" id="back-to-cart" type="button">
+            ← Quay lại giỏ hàng
+          </button>
+          <p class="eyebrow">Thông tin nhận hàng</p>
+          <h3>Hoàn tất đơn sách</h3>
+          <form class="checkout-form" id="checkout-form">
+            <label for="customer-name">Họ và tên</label>
+            <input
+              id="customer-name"
+              name="name"
+              required
+              placeholder="Nguyễn Văn A"
+            />
+            <label for="customer-phone">Số điện thoại</label>
+            <input
+              id="customer-phone"
+              name="phone"
+              type="tel"
+              required
+              pattern="[0-9+ .-]{8,}"
+              placeholder="090 123 4567"
+            />
+            <label for="customer-address">Địa chỉ nhận hàng</label>
+            <textarea
+              id="customer-address"
+              name="address"
+              required
+              rows="3"
+              placeholder="Số nhà, đường, phường/xã, tỉnh/thành"
+            ></textarea>
+            <label for="payment-method">Phương thức thanh toán</label>
+            <select id="payment-method" name="payment">
+              <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+              <option value="transfer">Chuyển khoản ngân hàng</option>
+            </select>
+            <button class="checkout-button" type="submit">
+              Đặt hàng <span>→</span>
+            </button>
+          </form>
+        </div>
+        <div class="checkout-success" id="checkout-success" hidden>
+          <div class="success-mark">✓</div>
+          <h3>Đặt hàng thành công</h3>
+          <p>
+            Cảm ơn bạn đã đặt sách tại Mộc Miên. Mã đơn của bạn là
+            <strong id="order-number"></strong>.
+          </p>
+          <button class="checkout-button" id="continue-shopping" type="button">
+            Tiếp tục mua sách <span>→</span>
+          </button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-empty" id="cart-empty">
+          Giỏ hàng đang trống. Hãy chọn một cuốn sách bạn thích.
+        </div>
+        <div class="cart-summary">
+          <span>Tạm tính</span><strong id="cart-subtotal">0đ</strong>
+        </div>
+        <button class="checkout-button" id="checkout-button" type="button">
+          Tiến hành đặt hàng <span>→</span>
+        </button>
+      </section>
+    </div>
+
+    <aside class="chat-widget" id="chat-widget" aria-label="Trợ lý Mộc Miên AI">
+      <div class="chat-window" id="chat-window" hidden>
+        <div class="chat-header">
+          <div class="assistant-avatar">✦</div>
+          <div>
+            <strong>Mộc Miên AI</strong><span><i></i> Đang online</span>
+          </div>
+          <button id="close-chat" type="button" aria-label="Đóng cửa sổ chat">
+            ×
+          </button>
+        </div>
+        <div class="chat-messages" id="chat-messages" aria-live="polite"></div>
+        <div class="suggestions" id="suggestions">
+          <button type="button" data-message="Gợi ý cho tôi một cuốn sách hay">
+            Gợi ý sách cho tôi</button
+          ><button type="button" data-message="Sách nào phù hợp để tặng bạn?">
+            Chọn sách làm quà</button
+          ><button type="button" data-message="Phí giao hàng bao nhiêu?">
+            Phí giao hàng?
+          </button>
+        </div>
+        <form class="chat-form" id="chat-form">
+          <label class="sr-only" for="chat-input">Nhập tin nhắn</label
+          ><input
+            id="chat-input"
+            autocomplete="off"
+            placeholder="Viết điều bạn muốn hỏi..."
+            type="text"
+          /><button type="submit" aria-label="Gửi tin nhắn">↑</button>
+        </form>
+      </div>
+      <button
+        class="chat-launcher"
+        id="open-chat"
+        type="button"
+        aria-label="Mở trợ lý Mộc Miên AI"
+      >
+        <span>✦</span><b>Hỏi Mộc Miên AI</b><i>1</i>
+      </button>
+    </aside>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
